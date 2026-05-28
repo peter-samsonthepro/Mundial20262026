@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Road to 2026</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <style>
+    .dorado{
+      color: rgb(214, 182, 0);
+    }
+    .verde{
+      color:rgb(1, 70, 16);
+    }
+    h3{
+      color:rgb(166, 124, 0)
+    }
+  </style>
+  <body>
+    <nav class="topnav">
+      <a href="index.html">Inicio</a>
+      <a href="estadios.html">Sedes</a>
+      <a href="equipos.html">Selecciones</a>
+    </nav>
+    <header>
+     <div class="texto-header">
+      <h1> Road to 2026</h1>
+      <hr style="width: 50%;">
+      
+      <h1 id="textoColor">Todo lo que tienes que saber para el mundial</h1><button id="boton">Clica</button>
+      </div>
+    </header>
+      <section class="content">
+        <h2>Aqui podras informarte sobre todo antes de este gran torneo</h2>
+        <p>Este  torneo que se celebra cada 4 años es la maxima competicion a nivel de selecciones</p>
+        <p>Los paises en los que tendra lugar este mundial es en:</p>
+        <div class="columnas">
+          <div class="etiqueta">
+            <h4><a class="Mex" href="https://es.wikipedia.org/wiki/M%C3%A9xico">Mexico:</a></h4>
+            <h5>Año de fundación de la selección: 9 de diciembre de 1923
+              Población=132.997.658</h5>
+            <img src="Bandera-de-M--xico-al-viento.png">
+            <img class="mapa" src="M--xico.png">
+          </div>
+          <div class="etiqueta">
+            <h4><a class="Can" href="https://es.wikipedia.org/wiki/Canad%C3%A1">Canadá:</a></h4>
+            <h5>Año de fundación de la selección:La federación, Canada Soccer, fue fundada en 1912.
+                Población=41.651.653</h5>
+            
+            <img src="Bandera-de-Canad---ondeando-al-viento.png">
+            <img class="mapa" src="Canad--.png">
+          </div>
+          <div class="etiqueta">
+            <h4><a href="https://es.wikipedia.org/wiki/Estados_Unidos">EEUU:</a></h4>
+              <h5>Año de fundación de la selección:la federación fue fundada en 1913
+                Poblacion=349.035.494</h5>
+            <img src="Bandera-de-los-EE.UU.-al-viento.png">
+            <img class="mapa" src="Estados-Unidos-de-America.png">
+          </div>
+        </div>
+        <h3>Cuenta atras.</h3>
+        <div id="countdown">
+          <span id="days">00</span>d : 
+         <span id="hours">00</span>h : 
+         <span id="minutes">00</span>m : 
+          <span id="seconds">00</span>s:
+        </div>
+    </section>
+     <script>
+      let fondo=document.querySelector("texto");
+      let boton=document.querySelector("#boton");
+      boton.addEventListener("click", function(){
+      document. getElementById("textoColor").classList.toggle("dorado");
+      })
+      // 1. Establece la fecha objetivo
+const targetDate = new Date("Jun 11, 2026 21:00:00").getTime();
+
+// 2. Crea el intervalo que se ejecuta cada 1 segundo
+const interval = setInterval(() => {
+    
+    // Obtener la fecha actual
+    const now = new Date().getTime();
+    
+    // Encontrar la distancia entre ahora y la fecha objetivo
+    const distance = targetDate - now;
+    
+    // 3. Cálculos de tiempo
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+    // 4. Mostrar los resultados en los elementos correspondientes
+    document.getElementById("days").innerText = days;
+    document.getElementById("hours").innerText = hours;
+    document.getElementById("minutes").innerText = minutes;
+    document.getElementById("seconds").innerText = seconds;
+    
+    // 5. Si la cuenta atrás termina, limpiar el intervalo
+    if (distance < 0) {
+        clearInterval(interval);
+        document.getElementById("countdown").innerHTML = "¡Mex-Sud se esta jugando!";
+    }
+}, 1000);
+     </script>       
+      
+  </body>
+</html>
