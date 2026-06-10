@@ -1,0 +1,89 @@
+
+body {
+  background: #ffffff;
+}
+.topnav a{
+  display: block;
+  float: left;
+  background-color: rgba(165, 81, 81, 0.68);
+  color: #47e828;
+  padding: 10px;
+  text-decoration: none;
+}
+.topnav a:hover{
+  opacity: 0.25;
+  color:#fff817;
+}
+header {
+  background-image:url(Trofeo-de-la-Copa-del-Mundo.png);
+  height:100%;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: center;
+}
+
+h2{
+  position: center;
+  color: #00f578;
+  background-color: rgba(0,0,0,0,4);
+  padding: 10%;
+  font-family: Georgia, serif;
+}
+p {
+  color: black;
+}
+h1 {
+  position: center;
+  color: rgb(241, 255, 92);
+  background-color: rgba(0,0,0,0,4);
+  padding: 10%;
+  font-weight: bold;
+  font-family: Garamond, serif;
+}
+img{
+  width:25%
+}
+.img
+.columnas{
+  display:flex;
+  align-content: center;
+  align-items: center;
+  margin-bottom: 1%;
+}
+.etiqueta img{
+  margin: auto;
+  width: 75%;
+  height: 30%;
+  object-fit: cover;
+}
+.etiqueta{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: #dbdada;
+  margin:5px;
+  padding:1px;
+  border-radius:20px;
+  box-shadow: 3px 5px rgba(0,0,0,0.3)
+}
+.mapa{
+  margin-top: 10px;
+}
+.Mex{
+  color:#007301;
+}
+.Can{
+  color: #d53030;
+}
+@media (max-width:650px){
+  .columnas{
+    flex-direction:column;
+  }
+  
+  }
